@@ -43,6 +43,12 @@
           flex-direction: row;
 }
 
+@media only screen and (max-width: 480px) {
+  .nav .container > div:last-child {
+    display: none !important;
+  }
+}
+
 .nav .container > .nav__logo img {
   width: 200px;
   height: auto;
@@ -88,5 +94,11 @@
 
 .nav .container > ul li a:visited, .nav .container > ul li a:link {
   color: #616161;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav__links {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

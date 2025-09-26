@@ -10,11 +10,28 @@
   &__container1 {
     width: 55%;
 
+    @include respondTo(lg) {
+      width: 100%;
+    }
+
     h1 {
       font-weight: 600;
       line-height: 4.5rem;
       position: relative;
       z-index: 2;
+
+      @include respondTo(md) {
+        font-size: 2.8rem;
+      }
+
+      @include respondTo(lg) {
+        text-align: center;
+      }
+
+      @include respondTo(sm) {
+        font-size: 2rem;
+        line-height: 3.5rem;
+      }
 
       span:first-child {
         position: relative;
@@ -22,11 +39,15 @@
         color: $secondary;
         margin-left: 20px;
 
+        @include respondTo(md) {
+          margin-left: 10px;
+        }
+
         &::before {
           content: "";
           position: absolute;
-          width: 115%;
-          height: 115%;
+          width: 108%;
+          height: 108%;
           background-color: $primary;
           transform: rotate(-3deg) translateY(-50%) translateX(-50%);
           top: 50%;
@@ -34,33 +55,50 @@
           z-index: -1;
         }
       }
-
-      span:last-child {
-        position: relative;
-        z-index: -2;
-      }
     }
 
     p {
-        color: $tertiary;
-        font-weight: 300;
-        margin-top: 10px;
+      color: $tertiary;
+      font-weight: 300;
+      margin-top: 10px;
+
+      @include respondTo(lg) {
+        text-align: center;
+      }
+
+      @include respondTo(sm) {
+        font-size: .9rem;
+      }
     }
-    
+
     .banner__buttons {
-        @include contentAlignmentMixin(flex-start);
-        gap: 25px;
-        margin-top: 50px;
+      @include contentAlignmentMixin(flex-start);
+      gap: 25px;
+      margin-top: 50px;
+
+      @include respondTo(lg) {
+        @include contentAlignmentMixin(center);
+      }
+
+      @include respondTo(sm) {
+        @include contentAlignmentMixin(center, center, column);
+        &>button {
+          width: 100%;
+        }
+      }
     }
   }
 
   &__container2 {
     width: 45%;
     @include contentAlignmentMixin(flex-end);
+    @include respondTo(lg) {
+      display: none;
+    }
 
     img {
-        width: 65%;
-        height: auto;
+      width: 65%;
+      height: auto;
     }
   }
 }

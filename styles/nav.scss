@@ -16,6 +16,9 @@
 
     & > div:last-child {
       @include contentAlignmentMixin(flex-end);
+      @include respondTo(sm) {
+        display: none !important;
+      }
     }
 
     & > .nav__logo {
@@ -36,6 +39,12 @@
           @include resetLinkStyles();
         }
       }
+    }
+  }
+
+  &__links {
+    @include respondTo(lg) {
+      display: none !important;
     }
   }
 }
