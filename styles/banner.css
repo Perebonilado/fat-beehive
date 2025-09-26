@@ -34,20 +34,13 @@
 
 @media only screen and (max-width: 768px) {
   .banner__container1 h1 {
-    font-size: 2.8rem;
+    line-height: 4.8rem;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .banner__container1 h1 {
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .banner__container1 h1 {
-    font-size: 2rem;
-    line-height: 3.5rem;
   }
 }
 
@@ -86,12 +79,6 @@
 @media only screen and (max-width: 1024px) {
   .banner__container1 p {
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .banner__container1 p {
-    font-size: .9rem;
   }
 }
 

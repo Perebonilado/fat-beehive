@@ -3,27 +3,42 @@
 @import "./vars";
 
 .carousel {
-  background-color: $primary;
-  overflow-y: hidden;
-  padding: 25px 0;
-  margin-bottom: 25px;
-
   &__container {
+    background-color: $primary;
+    overflow-x: hidden;
+    padding: 25px 0;
+    margin-bottom: 15px;
     @include contentAlignmentMixin(space-between);
   }
 
-  &__text-item {
+  &__item {
     color: #181a14;
     font-weight: 500;
     list-style: none;
-  }
+    min-width: fit-content;
+    flex: 1;
 
-  &__image-item {
-    list-style: none;
+    @include contentAlignmentMixin(center);
+    position: relative;
+    p {
+      padding: 0 25px;
+    }
 
-    img {
-      width: 20px;
-      height: auto;
+    &:first-child {
+      p {
+        padding-left: 0;
+      }
+    }
+
+    & > div {
+      @include contentAlignmentMixin(center);
+      left: 100%;
+      transform: translateX(-50%);
+      position: absolute;
+      img {
+        width: 17px;
+        height: auto;
+      }
     }
   }
 }
