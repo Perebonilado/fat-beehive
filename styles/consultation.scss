@@ -1,0 +1,48 @@
+@import "./mixins";
+@import "./breakpoints";
+@import "./vars";
+
+.consultation {
+  & > div {
+    @include contentAlignmentMixin(space-between);
+    padding: 70px 0;
+  }
+
+  &__container1,
+  &__container2 {
+    min-height: 400px;
+  }
+
+  &__container1 {
+    flex: 2;
+    @include contentAlignmentMixin(center, flex-start, column);
+
+    h1 span {
+      color: $primary;
+      margin-left: -10px;
+    }
+
+    p {
+      margin: 40px 0;
+      max-width: 500px;
+      line-height: 1.4rem;
+    }
+
+    h1 {
+      width: 100%;
+      max-width: 650px;
+      font-weight: 600;
+    }
+  }
+
+  &__container2 {
+    flex: 1;
+    @include contentAlignmentMixin(center, flex-end, column);
+
+    img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+  }
+}

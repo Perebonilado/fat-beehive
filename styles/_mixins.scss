@@ -1,0 +1,53 @@
+@mixin timelineCardMixin(
+  $translateY,
+  $translateX,
+  $bottom,
+  $top,
+  $left,
+  $right
+) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  top: $top;
+  transform: translateY($translateY) translateX($translateX);
+  width: calc(100% + 100px);
+  height: 200px;
+  border-radius: 6px;
+  border: 2px solid red;
+  background-color: white;
+}
+
+@mixin contentAlignmentMixin(
+  $justifyContent: center,
+  $alignItems: center,
+  $flexDirection: row
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin resetLinkStyles() {
+  text-decoration: none;
+  margin: none;
+  padding: none;
+
+  &:visited,
+  &:link {
+    color: #616161;
+  }
+}
+
+@mixin linkStyling() {
+  cursor: pointer;
+  color: #616161;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

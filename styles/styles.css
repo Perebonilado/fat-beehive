@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.button.primary {
+  background-color: #243342;
+  color: #B2FBA4;
+  border: 1px solid #243342;
+}
+
+.button.secondary {
+  background-color: transparent;
+  border: 1px solid #243342;
+  color: #243342;
+}
+
+.button.small {
+  padding: 12px;
+  font-size: 12px;
+}
+
+.button.large {
+  padding: 14px 28px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=styles.css.map */

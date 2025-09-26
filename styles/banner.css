@@ -1,0 +1,99 @@
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 80px 0;
+}
+
+.banner__container1 {
+  width: 55%;
+}
+
+.banner__container1 h1 {
+  font-weight: 600;
+  line-height: 4.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.banner__container1 h1 span:first-child {
+  position: relative;
+  z-index: -1;
+  color: #243342;
+  margin-left: 20px;
+}
+
+.banner__container1 h1 span:first-child::before {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 115%;
+  background-color: #B2FBA4;
+  -webkit-transform: rotate(-3deg) translateY(-50%) translateX(-50%);
+          transform: rotate(-3deg) translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.banner__container1 h1 span:last-child {
+  position: relative;
+  z-index: -2;
+}
+
+.banner__container1 p {
+  color: #616161;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.banner__container1 .banner__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.banner__container2 {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.banner__container2 img {
+  width: 65%;
+  height: auto;
+}
+/*# sourceMappingURL=banner.css.map */

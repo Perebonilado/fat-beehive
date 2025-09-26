@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,SAAS,CAAC;EACR,gBAAgB,EGLR,OAAO;EHMf,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,MAAM;EACf,aAAa,EAAE,IAAI;CAoBpB;;AAlBE,AAAD,oBAAY,CAAC;ECgBb,OAAO,EAAE,IAAI;EACb,eAAe,EDhBkB,aAAa;ECiB9C,WAAW,EALE,MAAM;EAMnB,cAAc,EALE,GAAG;CDZlB;;AAEA,AAAD,oBAAY,CAAC;EACX,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,IAAI;CACjB;;AAEA,AAAD,qBAAa,CAAC;EACZ,UAAU,EAAE,IAAI;CAMjB;;AAPA,AAGC,qBAHW,CAGX,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "carousel.scss",
+        "_mixins.scss",
+        "_breakpoints.scss",
+        "_vars.scss"
+    ],
+    "names": [],
+    "file": "carousel.css"
+}

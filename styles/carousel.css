@@ -1,0 +1,38 @@
+.carousel {
+  background-color: #B2FBA4;
+  overflow-y: hidden;
+  padding: 25px 0;
+  margin-bottom: 25px;
+}
+
+.carousel__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.carousel__text-item {
+  color: #181a14;
+  font-weight: 500;
+  list-style: none;
+}
+
+.carousel__image-item {
+  list-style: none;
+}
+
+.carousel__image-item img {
+  width: 20px;
+  height: auto;
+}
+/*# sourceMappingURL=carousel.css.map */

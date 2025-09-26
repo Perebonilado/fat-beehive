@@ -1,0 +1,41 @@
+@import "./mixins";
+@import "./breakpoints";
+
+.nav {
+  border-bottom: 1px solid #00000026;
+
+  .container {
+    @include contentAlignmentMixin(space-between);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & > div,
+    & > ul {
+      flex: 1;
+    }
+
+    & > div:last-child {
+      @include contentAlignmentMixin(flex-end);
+    }
+
+    & > .nav__logo {
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    & > ul {
+      @include contentAlignmentMixin(space-between);
+      list-style: none;
+
+      li {
+        @include linkStyling();
+
+        a {
+          @include resetLinkStyles();
+        }
+      }
+    }
+  }
+}

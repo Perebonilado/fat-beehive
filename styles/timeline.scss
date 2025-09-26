@@ -1,0 +1,172 @@
+@import "./mixins";
+@import "./breakpoints";
+@import "./vars";
+
+.timeline {
+  background-color: $altBgColor;
+
+  &__container {
+    @include contentAlignmentMixin(center, center, column);
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    h4 {
+      color: $tertiary;
+      font-weight: 500;
+    }
+
+    h4,
+    h2 {
+      text-align: center;
+    }
+  }
+
+  &__cards-container {
+    width: 100%;
+    min-height: 500px;
+    @include contentAlignmentMixin(center);
+
+    @include respondTo(lg) {
+      @include contentAlignmentMixin(center, center, column);
+    }
+
+    @include respondTo(md) {
+      @include contentAlignmentMixin(center, center, column);
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .timeline__header,
+    .timeline__footer {
+      font-weight: 600;
+    }
+  }
+
+  &__body {
+    width: 92%;
+    height: 2px;
+    background-color: #f76680;
+    position: relative;
+    @include contentAlignmentMixin(flex-start, flex-start);
+
+    @include respondTo(lg) {
+      width: 2px;
+      min-height: 600px;
+      padding-top: 100px;
+      @include contentAlignmentMixin(flex-start, flex-start, column);
+    }
+
+    @include respondTo(md) {
+      min-height: 1200px;
+      @include contentAlignmentMixin(space-around, flex-start, column);
+      padding-top: unset;
+    }
+  }
+
+  &__item {
+    width: 300px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    @include respondTo(lg) {
+      width: 20px;
+      height: 1px;
+    }
+
+    &:nth-child(odd) {
+      transform: translateY(-100%);
+      border-right: 2px solid #f76680;
+
+      @include respondTo(lg) {
+        border-top: 2px solid #f76680;
+        transform: translateX(-100%);
+        margin-bottom: 20px;
+      }
+
+      @include respondTo(md) {
+        transform: translateX(-50%);
+        margin-bottom: 0;
+      }
+
+      .timeline__card {
+        bottom: 30px;
+        left: 100%;
+        transform: translateX(-50%);
+
+        @include respondTo(lg) {
+          transform: translateY(-50%);
+          left: unset;
+          right: 100%;
+          top: 0;
+        }
+
+        @include respondTo(md) {
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      border-left: 2px solid #f76680;
+      margin-left: 40px;
+
+      @include respondTo(lg) {
+        border-top: 2px solid #f76680;
+        margin-left: 0;
+        margin-bottom: 150px;
+      }
+
+      @include respondTo(md) {
+        margin-bottom: 0;
+        transform: translateX(-50%);
+      }
+
+      .timeline__card {
+        top: 30px;
+        right: 100%;
+        transform: translateX(50%);
+
+        @include respondTo(lg) {
+          top: 0;
+          left: 100%;
+          transform: translateY(-50%);
+        }
+
+        @include respondTo(md) {
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__card {
+    width: 250px;
+    height: 150px;
+    border-radius: 6px;
+    border: 1px solid #e7daed;
+    background-color: white;
+    position: absolute;
+    padding: 16px;
+
+    p {
+      margin-top: 10px;
+      line-height: 1.3rem;
+    }
+
+    span {
+      background: linear-gradient(to right, #57007b, #f76680);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+
+      &:last-child {
+        margin-left: -3px;
+      }
+    }
+  }
+}

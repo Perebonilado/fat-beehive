@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+@import "./mixins";
+@import "./breakpoints";
+@import "./vars";
+
+.button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 6px;
+  font-weight: 600;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.primary {
+    background-color: $secondary;
+    color: $primary;
+    border: 1px solid $secondary;
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid $secondary;
+    color: $secondary;
+  }
+
+  &.small {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  &.large {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+}

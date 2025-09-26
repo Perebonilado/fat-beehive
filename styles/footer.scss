@@ -1,0 +1,81 @@
+@import "./mixins";
+@import "./breakpoints";
+@import "./vars";
+
+.footer {
+  background-color: $altBgColor;
+  padding: 80px 0;
+
+  &__contact {
+    flex: 2 !important;
+
+    h5 {
+      font-weight: 400;
+      width: 100%;
+      max-width: 200px;
+      color: $secondary;
+      margin-bottom: 80px;
+    }
+
+    a {
+      @include resetLinkStyles();
+      border-bottom: 2px solid #ffd700;
+      min-width: 150px;
+      display: inline-block;
+      color: #0a142f;
+      font-weight: 400;
+      padding-bottom: 2px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__links,
+  &__socials {
+    a {
+      @include resetLinkStyles();
+      @include linkStyling();
+      @include contentAlignmentMixin(flex-start, center column);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__links {
+    p {
+      margin-top: 60px;
+      color: $secondary;
+      font-weight: 200;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  &__back2top {
+    @include contentAlignmentMixin(flex-end);
+    a {
+      @include resetLinkStyles();
+
+      img {
+        width: 50px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.footer > div {
+  @include contentAlignmentMixin(space-between, flex-start);
+
+  @include respondTo(md) {
+    @include contentAlignmentMixin(center, center, column);
+    min-width: 300px;
+  }
+
+  & > div {
+    flex: 1;
+  }
+}
