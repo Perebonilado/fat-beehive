@@ -7,8 +7,6 @@
   padding: 80px 0;
 
   &__contact {
-    flex: 2 !important;
-
     h5 {
       font-weight: 400;
       width: 100%;
@@ -20,7 +18,6 @@
     a {
       @include resetLinkStyles();
       border-bottom: 2px solid #ffd700;
-      min-width: 150px;
       display: inline-block;
       color: #0a142f;
       font-weight: 400;
@@ -39,7 +36,7 @@
     }
   }
 
-  &__links {
+  &__copyright {
     p {
       margin-top: 60px;
       color: $secondary;
@@ -68,11 +65,67 @@
 }
 
 .footer > div {
-  @include contentAlignmentMixin(space-between, flex-start);
+  display: grid;
+  align-items: flex-start;
+  .footer__logo {
+    grid-area: logo;
+  }
+
+  .footer__contact {
+    grid-area: contact;
+  }
+
+  .footer_copyright {
+    grid-area: copyright;
+  }
+
+  .footer__links {
+    grid-area: links;
+    a {
+      text-align: center !important;
+    }
+  }
+
+  .footer__socials {
+    grid-area: socials;
+  }
+
+  .footer__back2top {
+    grid-area: back2top;
+  }
+  grid-template-areas:
+    "logo contact contact links socials back2top"
+    "logo contact contact copyright socials back2top";
 
   @include respondTo(md) {
-    @include contentAlignmentMixin(center, center, column);
-    min-width: 300px;
+    justify-content: center;
+    text-align: center;
+
+    grid-template-areas:
+      "links"
+      "socials"
+      "contact"
+      "logo"
+      "copyright"
+      "back2top";
+
+    a {
+      text-align: center !important;
+      display: block;
+    }
+
+    .footer__back2top {
+      @include contentAlignmentMixin();
+      margin-top: 40px;
+    }
+
+    .footer__contact {
+      margin: 30px 0;
+    }
+
+    .footer__logo {
+      transform: translateX(20px);
+    }
   }
 
   & > div {

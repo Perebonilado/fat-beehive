@@ -17,6 +17,10 @@
     flex: 2;
     @include contentAlignmentMixin(center, flex-start, column);
 
+    @include respondTo(lg) {
+      @include contentAlignmentMixin(center, center, column);
+    }
+
     h1 span {
       color: $primary;
       margin-left: -10px;
@@ -33,11 +37,21 @@
       max-width: 650px;
       font-weight: 600;
     }
+
+    h1, p {
+      @include respondTo(lg) {
+        text-align: center;
+      }
+    }
   }
 
   &__container2 {
     flex: 1;
     @include contentAlignmentMixin(center, flex-end, column);
+
+    @include respondTo(lg) {
+      display: none;
+    }
 
     img {
         width: 100%;
