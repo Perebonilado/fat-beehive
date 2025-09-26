@@ -167,10 +167,6 @@
     text-align: center;
         grid-template-areas: "links" "socials" "contact" "logo" "copyright" "back2top";
   }
-  .footer > div a {
-    text-align: center !important;
-    display: block;
-  }
   .footer > div .footer__back2top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,6 +189,10 @@
   .footer > div .footer__logo {
     -webkit-transform: translateX(20px);
             transform: translateX(20px);
+  }
+  .footer > div .footer__links a, .footer > div .footer__socials a {
+    text-align: center !important;
+    display: block;
   }
 }
 

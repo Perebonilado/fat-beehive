@@ -109,11 +109,6 @@
       "copyright"
       "back2top";
 
-    a {
-      text-align: center !important;
-      display: block;
-    }
-
     .footer__back2top {
       @include contentAlignmentMixin();
       margin-top: 40px;
@@ -125,6 +120,13 @@
 
     .footer__logo {
       transform: translateX(20px);
+    }
+
+    .footer__links, .footer__socials {
+      a {
+        text-align: center !important;
+        display: block;
+      }
     }
   }
 
