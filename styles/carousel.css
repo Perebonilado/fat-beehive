@@ -1,6 +1,6 @@
 .carousel__container {
   background-color: #B2FBA4;
-  overflow-x: hidden;
+  overflow-x: scroll;
   padding: 25px 0;
   margin-bottom: 15px;
   display: -webkit-box;

@@ -5,7 +5,7 @@
 .carousel {
   &__container {
     background-color: $primary;
-    overflow-x: hidden;
+    overflow-x: scroll;
     padding: 25px 0;
     margin-bottom: 15px;
     @include contentAlignmentMixin(space-between);
