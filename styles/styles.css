@@ -13,8 +13,12 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-.button {
+.button, a[role=button] {
+  text-decoration: none;
+  margin: none;
+  padding: none;
   outline: none;
+  text-align: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -26,29 +30,33 @@ body {
   font-weight: 600;
 }
 
-.button:hover {
+.button:visited, .button:link, a[role=button]:visited, a[role=button]:link {
+  color: #616161;
+}
+
+.button:hover, a[role=button]:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.button.primary {
+.button.primary, a[role=button].primary {
   background-color: #243342;
   color: #B2FBA4;
   border: 1px solid #243342;
 }
 
-.button.secondary {
+.button.secondary, a[role=button].secondary {
   background-color: transparent;
   border: 1px solid #243342;
   color: #243342;
 }
 
-.button.small {
+.button.small, a[role=button].small {
   padding: 12px;
   font-size: 12px;
 }
 
-.button.large {
+.button.large, a[role=button].large {
   padding: 14px 28px;
   font-size: 14px;
 }

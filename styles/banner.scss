@@ -73,7 +73,7 @@
 
       @include respondTo(sm) {
         @include contentAlignmentMixin(center, center, column);
-        &>button {
+        &>a[role=button] {
           width: 100%;
         }
       }

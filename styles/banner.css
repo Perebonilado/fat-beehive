@@ -134,7 +134,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .banner__container1 .banner__buttons > button {
+  .banner__container1 .banner__buttons > a[role=button] {
     width: 100%;
   }
 }

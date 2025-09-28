@@ -16,8 +16,10 @@ body {
 @import "./breakpoints";
 @import "./vars";
 
-.button {
+.button, a[role=button] {
+  @include resetLinkStyles();
   outline: none;
+  text-align: center;
   background: none;
   border: none;
   cursor: pointer;
